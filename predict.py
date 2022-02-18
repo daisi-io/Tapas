@@ -4,8 +4,9 @@ from transformers import TapasTokenizer, TapasForQuestionAnswering
 import pandas as pd
 import zipfile
 import json
+import tempfile
 
-root_folder = "/tmp"
+root_folder = tempfile.gettempdir()
 
 def unzip_model(zip_model_path):
     p = pathlib.Path(zip_model_path)
