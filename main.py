@@ -5,7 +5,7 @@ from predict import unzip_model, load_model_and_tokenizer, prepare_inputs, gener
 # model_zip_path = "/pebble_source/90ce7da0-3233-4665-84fd-305adb0883b3/tapas-base-finetuned-wtq.zip"
 # model_zip_path = "/Users/zhenshanjin/Documents/Belmont/sandy/UtilityDaisies/tapas-base-finetuned-wtq/tmp/tapas-base-finetuned-wtq.zip"
 # model_path = unzip_model(model_zip_path)
-model_path = "model"
+model_path = "/pebble_tmp/tmp/model_tapas"
 tokenizer, model = load_model_and_tokenizer(model_path)
 
 
