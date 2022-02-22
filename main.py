@@ -25,7 +25,7 @@ def run_tapas(table_json_path:pd.DataFrame, query):
 if __name__ == '__main__':
     # Define the table
     # data = {'Cities': ["Paris, France", "London, England", "Lyon, France"], 'Inhabitants': ["2.161", "8.982", "0.513"]}
-    data = "/Users/zhenshanjin/Documents/Belmont/sandy/UtilityDaisies/tapas-base-finetuned-wtq/example_table.json"
+    data = "/path/to/table/json"
     # Define the questions
     # queries = ["Which city has most inhabitants?", "What is the average number of inhabitants?", "How many French cities are in the list?", "How many inhabitants live in French cities?"]
     query = "Which city has most inhabitants?"
