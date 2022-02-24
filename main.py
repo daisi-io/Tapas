@@ -4,15 +4,15 @@ from predict import unzip_model, load_model_and_tokenizer, prepare_inputs, gener
 
 # get model_zip_path
 model_zip_path = "/pebble_tmp/tmp/tapas-base-finetuned-wtq.zip"
+model_path = unzip_model(model_zip_path)
+print(f"files: {os.listdir(model_path)}")
+tokenizer, model = load_model_and_tokenizer(model_path)
 
 
 def run_tapas(table_json_path:pd.DataFrame, query):
     """
     Invoke the TAPAS model.
     """
-    model_path = unzip_model(model_zip_path)
-    print(f"files: {os.listdir(model_path)}")
-    tokenizer, model = load_model_and_tokenizer(model_path)
     print(f"model_path: ", model_path)
     queries = [query]
     table, inputs = prepare_inputs(table_json_path, queries, tokenizer)
